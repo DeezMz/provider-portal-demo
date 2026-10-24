@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ridgeline Sports Network — Provider Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+    header {
+      background: #020617;
+      border-bottom: 1px solid #1f2937;
+      padding: 16px 24px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+    header p {
+      margin: 4px 0 0;
+      font-size: 14px;
+      color: #9ca3af;
+    }
+    main {
+      max-width: 1100px;
+      margin: 24px auto 40px;
+      padding: 0 16px;
+    }
+    .card {
+      background: #020617;
+      border: 1px solid #1f2937;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+    }
+    .card h2 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      background: #022c22;
+      color: #bbf7d0;
+      border-radius: 999px;
+      padding: 4px 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid #1f2937;
+      padding: 6px 8px;
+      text-align: left;
+    }
+    th {
+      background: #020617;
+      font-weight: 600;
+    }
+    .tag {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 999px;
+      font-size: 12px;
+      background: #fbbf24;
+      color: #111827;
+      font-weight: 600;
+    }
+    .btn-row {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .btn {
+      font-size: 13px;
+      padding: 6px 10px;
+      border-radius: 6px;
+      border: 1px solid #4b5563;
+      background: #111827;
+      color: #e5e7eb;
+      cursor: default;
+    }
+    .totals {
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: #a5b4fc;
+      font-weight: 500;
+    }
+    .section-note {
+      font-size: 13px;
+      color: #9ca3af;
+      margin-top: 4px;
+    }
+    .top-nav {       
+      display: flex;       
+      align-items: center;       
+      justify-content: space-between;       
+      padding: 10px 20px;       
+      background: #000000;       
+      border-bottom: 1px solid #1f2937;       
+      position: sticky;       
+      top: 0;       
+      z-index: 10;     
+    }     
+    .nav-center {       
+      display: flex;       
+      justify-content: center;       
+      flex: 1;     
+    }     
+    .nav-left,     
+    .nav-right {       
+      width: 120px;       
+      display: flex;       
+      align-items: center;       
+      gap: 8px;       
+      justify-content: flex-end;     
+    }     
+    .logo {       
+      height: 28px;     
+    }     
+    .icon-btn {       
+      background: transparent;       
+      border: none;       
+      color: #e5e7eb;       
+      font-size: 18px;       
+      cursor: pointer;     
+    } 
+  </style>
+</head>
+<body>
+  <header class="top-nav">     
+    <div class="nav-left"></div>     
+    <div class="nav-center">       
+      <img src="https://static-assets.fubo.tv/prod/4c7fb8f3e7f8cf06f289f4d0c2f9a5bb-fubo-wordmark-red.svg" alt="Fubo" class="logo">     
+    </div>     
+    <div class="nav-right">       
+      <button class="icon-btn" aria-label="Search">🔍</button>       
+      <button class="icon-btn" aria-label="Menu">☰</button>     
+    </div>   
+  </header> 
+  <body>
+  <header>
+    <h1>Ridgeline Sports Network — Provider Dashboard</h1>
+    <p>Signed in as Marcus Webb · provider@ridgelinenetworks.com</p>
+  </header>
+    <main>
+    <div class="card">
+      <h2>Welcome back, Marcus</h2>
+      <p>
+        Here's where your submissions stand:
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Submission</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Event schedule</td><td>✅ Submitted Oct 20</td></tr>
+          <tr><td>Rundown</td><td>✅ Submitted Oct 21</td></tr>
+          <tr><td>Contact info</td><td>✅ Submitted Oct 20</td></tr>
+          <tr><td>Graphics and logos</td><td>✅ Submitted Oct 21</td></tr>
+          <tr><td>Video clips</td><td>✅ Submitted Oct 22</td></tr>
+          <tr><td>Promo materials</td><td>✅ Submitted Oct 22</td></tr>
+          <tr><td>VOD-to-live login info</td><td>✅ Submitted Oct 22</td></tr>
+        </tbody>
+      </table>
+      <p class="section-note">
+        Everything's in — you're set for the season. Each section below saves on its own, so you can come back and update any of them anytime.
+      </p>
+    </div>
+        <div class="card">
+      <h2>Event schedule</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Event</th>
+            <th>Start (MT)</th>
+            <th>Venue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Nov 6</td><td>Ridgeline Rumble 12</td><td>7:00 PM</td><td>Denver Coliseum</td></tr>
+          <tr><td>Nov 20</td><td>Friday Night Fights</td><td>8:00 PM</td><td>Ridgeline Arena</td></tr>
+          <tr><td>Dec 4</td><td>Winter Classic</td><td>6:30 PM</td><td>Broadmoor World Arena</td></tr>
+          <tr><td>Dec 18</td><td>Holiday Havoc</td><td>8:00 PM</td><td>Ridgeline Arena</td></tr>
+        </tbody>
+      </table>
+    </div>
+        <div class="card">
+      <h2>Rundown</h2>
+      <div class="totals">
+        TOTAL RUNTIME 1:29:30 · TOTAL AD TIME 0:06:30
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>Hit time</th>
+            <th>Duration</th>
+            <th>Segment title</th>
+            <th>Screen content</th>
+            <th>Audio / cues</th>
+            <th>Notes / goals</th>
+            <th>Ad break?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td><td>5:30 PM</td><td>1:25:00</td>
+            <td>Doors open / pre-show</td>
+            <td>Sponsor loop</td>
+            <td>House music</td>
+            <td>Not in broadcast runtime</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>2</td><td>6:55 PM</td><td>0:03:00</td>
+            <td>National anthem</td>
+            <td>Full screen</td>
+            <td>Anthem mic</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>3</td><td>6:58 PM</td><td>0:02:00</td>
+            <td>Opening remarks</td>
+            <td>Lower third</td>
+            <td>Podium mic</td>
+            <td>Introduce the card</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>4</td><td>7:00 PM</td><td>0:12:00</td>
+            <td>Bout 1 (3 x 5 min)</td>
+            <td>Ring wide + lower thirds</td>
+            <td>Ringside mix</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td>5</td><td>7:12 PM</td><td>0:02:00</td>
+            <td>Commercial break</td>
+            <td>Ad slate</td>
+            <td>Network feed</td>
+            <td>SCTE-35 in/out</td>
+            <td><span class="tag">Ad break</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="btn-row">
+        <button class="btn">Add segment</button>
+        <button class="btn">Add commercial break</button>
+        <button class="btn">Save rundown</button>
+        <button class="btn">Upload a rundown file instead</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Contact info</h2>
+      <p><strong>Primary contact:</strong> Marcus Webb, Production Manager — marcus@ridgelinenetworks.com — (303) 555-0147</p>
+      <p><strong>Day-of contact:</strong> Tasha Ruiz, Stage Manager — (303) 555-0193</p>
+      <p><strong>Billing contact:</strong> Dana Webb, Finance — billing@ridgelinenetworks.com</p>
+      <div class="btn-row">
+        <button class="btn">Edit contacts</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
