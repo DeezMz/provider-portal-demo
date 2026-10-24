@@ -1,141 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Ridgeline Sports Network — Provider Dashboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!DOCTYPE html> <html lang="en"> <head>   <meta charset="UTF-8" />   <title>Ridgeline Sports Network – Provider Dashboard</title>   <meta name="viewport" content="width=device-width, initial-scale=1" />   <style>     /* styles will go here */   </style> </head> <body> 
   <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #0f172a;
-      color: #e5e7eb;
-    }
-    header {
-      background: #020617;
-      border-bottom: 1px solid #1f2937;
-      padding: 16px 24px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 20px;
-    }
-    header p {
-      margin: 4px 0 0;
-      font-size: 14px;
-      color: #9ca3af;
-    }
-    main {
-      max-width: 1100px;
-      margin: 24px auto 40px;
-      padding: 0 16px;
-    }
-    .card {
-      background: #020617;
-      border: 1px solid #1f2937;
-      border-radius: 10px;
-      padding: 16px 20px;
-      margin-bottom: 20px;
-    }
-    .card h2 {
-      margin-top: 0;
-      font-size: 18px;
-    }
-    .status-pill {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 13px;
-      background: #022c22;
-      color: #bbf7d0;
-      border-radius: 999px;
-      padding: 4px 10px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 8px;
-      font-size: 14px;
-    }
-    th, td {
-      border: 1px solid #1f2937;
-      padding: 6px 8px;
-      text-align: left;
-    }
-    th {
-      background: #020617;
-      font-weight: 600;
-    }
-    .tag {
-      display: inline-block;
-      padding: 2px 6px;
-      border-radius: 999px;
-      font-size: 12px;
-      background: #fbbf24;
-      color: #111827;
-      font-weight: 600;
-    }
-    .btn-row {
-      margin-top: 10px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .btn {
-      font-size: 13px;
-      padding: 6px 10px;
-      border-radius: 6px;
-      border: 1px solid #4b5563;
-      background: #111827;
-      color: #e5e7eb;
-      cursor: default;
-    }
-    .totals {
-      font-size: 14px;
-      margin-bottom: 6px;
-      color: #a5b4fc;
-      font-weight: 500;
-    }
-    .section-note {
-      font-size: 13px;
-      color: #9ca3af;
-      margin-top: 4px;
-    }
-    .top-nav {       
-      display: flex;       
-      align-items: center;       
-      justify-content: space-between;       
-      padding: 10px 20px;       
-      background: #000000;       
-      border-bottom: 1px solid #1f2937;       
-      position: sticky;       
-      top: 0;       
-      z-index: 10;     
-    }     
-    .nav-center {       
-      display: flex;       
-      justify-content: center;       
-      flex: 1;     
-    }     
-    .nav-left,     
-    .nav-right {       
-      width: 120px;       
-      display: flex;       
-      align-items: center;       
-      gap: 8px;       
-      justify-content: flex-end;     
-    }     
-    .logo {       
-      height: 28px;     
-    }     
-    .icon-btn {       
-      background: transparent;       
-      border: none;       
-      color: #e5e7eb;       
-      font-size: 18px;       
-      cursor: pointer;     
-    } 
+    /* styles will go here */ 
   </style>
 </head>
 <body>
@@ -145,8 +10,8 @@
     <img src="Fubo White-Red Logo.jpg" alt="Fubo" class="logo">
   </div>
   <div class="nav-right">
-    <button class="icon-btn" aria-label="Search">🔍</button>
-    <button class="icon-btn" aria-label="Menu">☰</button>
+    <button class="icon-btn" aria-label="Search">●</button>
+    <button class="icon-btn" aria-label="Menu">≡</button>
   </div>
 </header>
   <main class="landing">
@@ -155,7 +20,28 @@
     <p>One place for schedules, rundowns, graphics, and delivery info.</p>
     <a class="btn-primary" href="dashboard.html">Log in to demo portal</a>
   </section>
-      <section class="teaser-grid">
+<section class="teaser-grid">
+  <div class="teaser-card">
+    <h2>Book test windows</h2>
+    <p>Use the calendar to lock in your pre-event tests without email back-and-forth.</p>
+  </div>
+    <div class="teaser-card">
+    <h2>Upload once, done</h2>
+    <p>Rundowns, graphics, video, and promo live in one place instead of scattered links.</p>
+  </div>
+    <div class="teaser-card">
+    <h2>Stay on spec</h2>
+    <p>Specs and forms are built in so you always know what you're aiming at.</p>
+  </div>
+</section>
+  </main>
+  <section class="teaser-grid">
+    <div class="teaser-card">
+      <!-- you can add more teaser cards later -->
+    </div>
+  </section>
+</main>
+</body>
     <div class="teaser-card">
       <h2>Book test windows</h2>
       <p>Use the calendar to lock in your pre-event tests without email back-and-forth.</p>
