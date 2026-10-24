@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top left, #ff3200 0%, ##ff3200 75%, #000000 90%);
+      background: radial-gradient(circle at top left, #ff3200 0%, ##ff3200 65%, #000000 90%);
       color: #ffffff;
       min-height: 100vh;
       display: flex;
@@ -46,12 +46,13 @@
     .nav-center {
       flex: 0 0 auto;
     }
-
-    .logo {
-      height: 180px;
-      object-fit: contain;
-    }
-
+    
+.logo {
+  width: 260px;      /* make this bigger or smaller */
+  height: auto;
+  object-fit: contain;
+}    
+    
     .nav-right {
       display: flex;
       gap: 10px;
