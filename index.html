@@ -2,177 +2,370 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Ridgeline Sports Network – Provider Dashboard</title>
+  <title>Fubo Provider Portal</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    /* basic layout so it doesn’t look awful */
+    /* PAGE BACKGROUND */
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top left, #ff3200, #000000 55%);
+      background: radial-gradient(circle at top left, #ff3200 0%, #000000 55%, #000000 100%);
       color: #ffffff;
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: center;
       padding: 24px;
       box-sizing: border-box;
     }
-        .page-frame {
+        /* MAIN FRAME — NOW MUCH BIGGER */
+    .page-frame {
       border: 2px solid #ffffff;
-      border-radius: 16px;
-      padding: 24px;
+      border-radius: 18px;
       width: 100%;
-      max-width: 900px;
+      max-width: 1400px;
+      min-height: 80vh;
+      background: rgba(0, 0, 0, 0.78);
       box-sizing: border-box;
-      background: rgba(0, 0, 0, 0.65);
-    }
-        .top-nav {
+      padding: 28px 32px;
       display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 24px;
+      flex-direction: column;
+      gap: 24px;
     }
-        .logo {
-      height: 40px;
+        /* MAIN FRAME — NOW MUCH BIGGER */
+    .page-frame {
+      border: 2px solid #ffffff;
+      border-radius: 18px;
+      width: 100%;
+      max-width: 1400px;
+      min-height: 80vh;
+      background: rgba(0, 0, 0, 0.78);
+      box-sizing: border-box;
+      padding: 28px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+        .nav-left-icons {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
     }
 
-    .icon-btn {
-      background: transparent;
-      border: 1px solid #ffffff66;
-      color: #ffffff;
+    .nav-icon {
+      width: 34px;
+      height: 34px;
       border-radius: 999px;
-      width: 32px;
-      height: 32px;
-      margin-left: 8px;
+      border: 1px solid #ffffff55;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      background: rgba(0, 0, 0, 0.6);
       cursor: pointer;
     }
 
-    .landing {
+    .nav-center {
+      flex: 0 0 auto;
+    }
+
+    .logo {
+      height: 40px;
+      object-fit: contain;
+    }
+
+    .nav-right {
+      display: flex;
+      gap: 10px;
+    }
+
+    .icon-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      border: 1px solid #ffffff55;
+      background: rgba(0, 0, 0, 0.7);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    /* MAIN AREA LAYOUT */
+    .main-row {
+      flex: 1;
       display: grid;
-      grid-template-columns: 2fr 3fr;
-      gap: 24px;
+      grid-template-columns: 260px 1.4fr 1.1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    /* LEFT COLUMN (for calendar later, blank for now) */
+    .left-column {
+      border-right: 1px solid #ffffff22;
+      padding-right: 16px;
+      font-size: 0.9rem;
+      color: #f1f1f1aa;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      text-align: left;
+      max-width: 520px;
     }
 
     .hero h1 {
-      margin: 0 0 8px;
+      margin: 0 0 6px;
+      font-size: 3.4rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .hero h2 {
+      margin: 0 0 14px;
       font-size: 2rem;
+      font-weight: 600;
+      color: #ffd5c0;
     }
 
     .hero p {
-      margin: 0 0 16px;
-      color: #f5f5f5;
+      margin: 0;
+      font-size: 1.02rem;
+      line-height: 1.6;
+      color: #f8f8f8;
     }
 
-    .btn-primary {
-      display: inline-block;
-      padding: 10px 18px;
+    /* LOGIN CARD */
+    .login-card {
+      background: rgba(10, 10, 10, 0.9);
+      border-radius: 18px;
+      padding: 20px 22px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+      max-width: 380px;
+      justify-self: flex-end;
+    }
+
+    .login-card h3 {
+      margin: 0 0 12px;
+      font-size: 1.2rem;
+    }
+
+    .field-label {
+      font-size: 0.8rem;
+      margin-bottom: 4px;
+      color: #f1f1f1aa;
+    }
+
+    .field {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid #ffffff33;
+      background: #050505;
+      color: #ffffff;
+      box-sizing: border-box;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .primary-btn {
+      width: 100%;
+      padding: 9px 10px;
       border-radius: 999px;
+      border: none;
       background: #ff3200;
       color: #ffffff;
-      text-decoration: none;
       font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      margin-top: 4px;
+      margin-bottom: 8px;
     }
 
-    .teaser-grid {
-      display: grid;
-      gap: 12px;
+    .small-link {
+      font-size: 0.8rem;
+      color: #f1f1f1bb;
+      text-align: center;
+      margin-bottom: 10px;
+      cursor: pointer;
     }
 
-css
-.teaser-card {
-  border: 1px solid #ffffff33;
-  border-radius: 12px;
-  padding: 10px 12px;
-  font-size: 0.9rem;
-  background: #111111aa;
-}
-
-    .teaser-card h2 {
-      margin: 0 0 4px;
-      font-size: 1rem;
+    .small-link a {
+      color: #ffffff;
+      text-decoration: none;
     }
 
-    .follow-us {
-      margin-top: 20px;
+    .divider-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      color: #f1f1f1aa;
+      margin: 10px 0;
+    }
+
+    .divider-line {
+      flex: 1;
+      height: 1px;
+      background: #ffffff22;
+    }
+
+    .social-login-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .social-btn {
+      flex: 1;
+      padding: 7px 8px;
+      border-radius: 999px;
+      border: 1px solid #ffffff33;
+      background: transparent;
+      color: #ffffff;
+      font-size: 0.8rem;
+      cursor: pointer;
+    }
+
+    .secondary-btn {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid #ffffff55;
+      background: transparent;
+      color: #ffffff;
+      font-weight: 500;
       font-size: 0.9rem;
-      color: #f1f1f1;
+      cursor: pointer;
+      margin-top: 4px;
+    }
+
+    /* FOOTER */
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: #f1f1f1bb;
+      border-top: 1px solid #ffffff22;
+      padding-top: 10px;
+      margin-top: 6px;
+    }
+
+    .footer-left span {
+      font-weight: 600;
+      margin-right: 4px;
     }
 
     .social-row span {
       margin-right: 12px;
       font-weight: 600;
     }
-  css
-.hero-center {
-  text-align: left;
-  max-width: 420px;
-}
-    .hero-center h1 {
-  margin: 0 0 4px;
-  font-size: 2.6rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-}
-    .hero-center h2 {
-  margin: 0 0 10px;
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #ffd5c0;
-}
-    .hero-center p {
-  margin: 0;
-  font-size: 0.98rem;
-  line-height: 1.5;
-  color: #f8f8f8;
-}
+
+    @media (max-width: 900px) {
+      .page-frame {
+        padding: 20px;
+      }
+      .main-row {
+        grid-template-columns: 1fr;
+      }
+      .left-column {
+        display: none;
+      }
+      .login-card {
+        justify-self: stretch;
+        max-width: none;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="page-frame">
 
     <header class="top-nav">
-      <div class="nav-left"></div>
+      <div class="nav-left-icons">
+        <div class="nav-icon" title="Media">🎬</div>
+        <div class="nav-icon" title="Messages">💬</div>
+        <div class="nav-icon" title="Uploads">⬆️</div>
+        <div class="nav-icon" title="Calendar">📅</div>
+        <div class="nav-icon" title="Diagram">☁️</div>
+      </div>
+
       <div class="nav-center">
+        <!-- swap src to your real logo file name -->
         <img src="Fubo White-Red Logo.jpg" alt="Fubo" class="logo">
       </div>
+
       <div class="nav-right">
-        <button class="icon-btn" aria-label="Search">●</button>
+        <button class="icon-btn" aria-label="Search">🔍</button>
         <button class="icon-btn" aria-label="Menu">≡</button>
       </div>
     </header>
 
-<main class="landing">
-  <section class="hero hero-center">
-    <h1>Welcome</h1>
-    <h2>Provider Portal</h2>
-    <p>One place for uploading documents, schedule testing, and delivery info.</p>
-  </section>
+    <div class="main-row">
+      <aside class="left-column">
+        <!-- placeholder for future calendar widget -->
+        Calendar and testing slots coming here.
+      </aside>
 
-       <section class="teaser-grid">
-    <div class="teaser-card">
-      <h2>Book test windows</h2>
-      <p>Use the calendar to lock in your pre-event tests without email back-and-forth.</p>
-    </div>
-    <div class="teaser-card">
-      <h2>Upload once, done</h2>
-      <p>Rundowns, graphics, video, and promo live in one place instead of scattered links.</p>
-    </div>
-    <div class="teaser-card">
-      <h2>Stay on spec</h2>
-      <p>Specs and forms are built in so you always know what you’re aiming at.</p>
-    </div>
-  </section>
-</main>
+      <section class="hero">
+        <h1>Welcome</h1>
+        <h2>Provider Portal</h2>
+        <p>One place for uploading documents, schedule testing, and delivery info.</p>
+      </section>
 
-    <section class="follow-us">
-      <p>Follow us for schedule updates and highlights:</p>
+      <section class="login-card">
+        <h3>Log in to your provider space</h3>
+
+        <div class="field-group">
+          <div class="field-label">Company name</div>
+          <input class="field" type="text" placeholder="Ridgeline Sports Network">
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">Work email</div>
+          <input class="field" type="email" placeholder="you@example.com">
+        </div>
+
+        <div class="field-group">
+          <div class="field-label">Password</div>
+          <input class="field" type="password" placeholder="••••••••••">
+        </div>
+
+        <button class="primary-btn">Log in</button>
+
+        <div class="small-link">
+          <a href="#">Forgot your password?</a>
+        </div>
+
+        <div class="divider-row">
+          <div class="divider-line"></div>
+          <span>or continue with</span>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="social-login-row">
+          <button class="social-btn">Google</button>
+          <button class="social-btn">Apple</button>
+        </div>
+
+        <button class="secondary-btn">Create a new provider account</button>
+      </section>
+    </div>
+
+    <footer class="footer-row">
+      <div class="footer-left">
+        <span>Fubo.</span> Follow us
+      </div>
       <div class="social-row">
         <span>@FuboSports</span>
         <span>@FuboSportsNet</span>
       </div>
-    </section>
+    </footer>
 
   </div>
 </body>
+</html>
