@@ -13,9 +13,9 @@
       color: #ffffff;
       min-height: 100vh;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: flex-start;
-      padding: 0px;
+      padding: 10px;
       box-sizing: border-box;
     }
         /* TOP NAV */
@@ -29,19 +29,20 @@
           flex-direction: column;   
           gap: 16px;   
           padding-left: 0px;
-          margin-left: -95px; 
+          margin-left: 0px;
+          position: fixed;       
+          left: 0;       
+          top: 120px;
     }
 
     .nav-icon {
       width: 120px;
       height: 120px;
       border-radius: 999px;
-      border: 1px solid #ffffff55;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 3rem;
-      background: rgba(0, 0, 0, 0.6);
       cursor: pointer;
     }
 
