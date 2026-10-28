@@ -24,14 +24,14 @@
       align-items: center;
       justify-content: center; padding: 0px 4px; margin-top: 0px; line-height: 0; /* smaller top padding = logo higher */
     }
-        .nav-left-icons {   
+        .nav-right-icons {   
           display: flex;   
           flex-direction: column;   
           gap: 16px;   
           padding-left: 0px;
           margin-left: 0px;
           position: fixed;       
-          left: 0;       
+          right: 0;       
           top: 120px;
     }
 
@@ -277,7 +277,7 @@
   <div class="page-frame">
       <header class="top-nav">
 
-      <div class="nav-left-icons">
+      <div class="nav-right-icons">
         <div class="nav-icon" title="Media">🎬</div>
         <div class="nav-icon" title="Messages">💬</div>
         <div class="nav-icon" title="Uploads">⬆️</div>
@@ -401,12 +401,12 @@
         }  
 .nav-widgets {
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 10px 20px;
-    width: 100%;
-    box-sizing: border-box;
-  flex-wrap: nowrap;
+    flex-direction: column;     
+    gap: 15px;     
+    padding: 20px;     
+    width: 250px;     
+    position: fixed; 
+    left: 0;     top: 120px; }
 }
 .nav-widget {
     flex: 1;
@@ -440,91 +440,6 @@
     color: #e50514;
 }     
     </style>
-    <div class="calendar-widget">
-        <div class="calendar-header">
-            <button class="nav-btn" id="prevMonth">&lsaquo;</button>
-            <div class="current-month" id="monthDisplay"></div>
-            <button class="nav-btn" id="nextMonth">&rsaquo;</button>
-        </div>
-        <div class="weekdays">
-            <div>Su</div><div>Mo</div><div>Tu</div><div>We</div><div>Th</div><div>Fr</div><div>Sa</div>
-        </div>
-        <div class="days-grid" id="daysContainer"></div>
-    </div>
-
-    <script>
-        const monthDisplay = document.getElementById('monthDisplay');
-        const daysContainer = document.getElementById('daysContainer');
-        const prevBtn = document.getElementById('prevMonth');
-        const nextBtn = document.getElementById('nextMonth');
-
-        const months = [
-            "January", "February", "March", "April", "May", "June", 
-            "July", "August", "September", "October", "November", "December"
-        ];
-
-        let date = new Date();
-        let currentYear = date.getFullYear();
-        let currentMonth = date.getMonth();
-
-        function renderCalendar() {
-            daysContainer.innerHTML = "";
-            
-            // Set header text
-            monthDisplay.innerText = `${months[currentMonth]} ${currentYear}`;
-
-            // First day of the current month
-            const firstDayIndex = new Date(currentYear, currentMonth, 1).getDay();
-            // Last day of the current month
-            const lastDay = new Date(currentYear, currentMonth + 1, 0).getDate();
-
-            // Render empty slots for padding before the 1st of the month
-            for (let i = 0; i < firstDayIndex; i++) {
-                const emptyDiv = document.createElement('div');
-                emptyDiv.classList.add('day', 'empty');
-                daysContainer.appendChild(emptyDiv);
-            }
-
-            // Render the days of the month
-            const today = new Date();
-            for (let day = 1; day <= lastDay; day++) {
-                const dayDiv = document.createElement('div');
-                dayDiv.classList.add('day');
-                dayDiv.innerText = day;
-
-                // Highlight today's real-time date
-                if (
-                    day === today.getDate() && 
-                    currentMonth === today.getMonth() && 
-                    currentYear === today.getFullYear()
-                ) {
-                    dayDiv.classList.add('today');
-                }
-
-                daysContainer.appendChild(dayDiv);
-            }
-        }
-
-        prevBtn.addEventListener('click', () => {
-            currentMonth--;
-            if (currentMonth < 0) {
-                currentMonth = 11;
-                currentYear--;
-            }
-            renderCalendar();
-        });
-
-        nextBtn.addEventListener('click', () => {
-            currentMonth++;
-            if (currentMonth > 11) {
-                currentMonth = 0;
-                currentYear++;
-            }
-            renderCalendar();
-        });
-
-        renderCalendar();
-    </script>
         
       </aside>
 
