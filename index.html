@@ -400,8 +400,46 @@
             color: var(--accent-text);
             font-weight: 600;
         }
+      
+.nav-widgets {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 40px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.nav-widget {
+    flex: 1;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+}
+ .nav-widget h3 {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+ .nav-widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ .nav-widget ul li {
+    margin-bottom: 8px;
+}
+.nav-widget ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+.nav-widget ul li a:hover {
+    color: #e50514;
+}     
     </style>
-
     <div class="calendar-widget">
         <div class="calendar-header">
             <button class="nav-btn" id="prevMonth">&lsaquo;</button>
@@ -534,7 +572,38 @@
         <button class="secondary-btn">Create a new provider account</button>
       </section>
     </div>
-
+    
+    <div class="nav-widgets">
+      <div class="nav-widget">
+        <h3>Provider Tools</h3>
+        <ul>
+          <li><a href="spec-info.html">Spec Info</a></li>
+          <li><a href="spec-form.html">Spec Form</a></li>
+          <li><a href="media-upload.html">Media Upload</a></li>
+          <li><a href="contact-info.html">Contact Info</a></li>
+          <li><a href="rundown-sheet.html">Rundown Sheet</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+        </ul>
+      </div>
+            <div class="nav-widget">
+        <h3>Testing & Layout</h3>
+        <ul>
+          <li><a href="testing-scheduler-calendar.html">Calendar/Testing</a></li>
+          <li><a href="Diagrams-layout.html">Diagrams/Layout</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="nav-widget">
+        <h3>Access</h3>
+        <ul>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="admin-view.html">Admin View</a></li>
+            <li><a href="VOD-to-live.html">VOD-to-Live</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </div>
+    
     <footer class="footer-row">
       <div class="footer-left">
         <span>Fubo.</span> Follow us
